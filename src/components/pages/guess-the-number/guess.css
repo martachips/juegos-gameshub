@@ -1,0 +1,42 @@
+#app {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--rtc-margin-xxl) auto;
+}
+
+.guess-title {
+  font-family: var(--rtc-font-family);
+  text-align: center;
+  color: var(--rtc-color-4);
+}
+
+.container-input-button {
+  margin: var(--rtc-margin-l);
+}
+
+.number-field,
+.guess-button {
+  height: 30px;
+  margin: var(--rtc-margin-s);
+  border-radius: var(--rtc-border-radius);
+  font-family: var(--rtc-font-family-2);
+}
+
+.number-field {
+  width: 100px;
+  outline: none;
+  padding: var(--rtc-padding-s);
+}
+
+.guess-button {
+  width: 45px;
+  background-color: var(--rtc-color-1);
+}
+.message-p p {
+  padding: var(--rtc-padding-s);
+  text-align: center;
+  font-family: var(--rtc-font-family-2);
+  color: var(--rtc-color-1);
+}

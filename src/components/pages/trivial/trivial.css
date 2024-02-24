@@ -1,0 +1,61 @@
+.trivial-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.trivial-title {
+  color: var(--rtc-color-4);
+  font-family: var(--rtc-font-family);
+  margin: var(--rtc-margin-l);
+}
+
+.div-container {
+  width: 18em;
+  height: 17em;
+  text-align: center;
+  border: 1px solid rgb(23, 23, 23);
+  border-radius: 8px;
+  box-shadow: inset 0px 0px 15px -4px rgba(0, 0, 0, 0.75);
+}
+
+.question {
+  margin: var(--rtc-margin-xs);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--rtc-color-1);
+  font-family: var(--rtc-font-family-2);
+}
+
+.input-checkbox {
+  display: none;
+}
+
+.div-input-label {
+  border: 1px solid grey;
+  padding: var(--rtc-padding-xs);
+  border-radius: 10px;
+  width: 80%;
+  margin: var(--rtc-margin-xs) auto;
+  color: var(--rtc-background-color);
+  background-color: var(--rtc-color-1);
+  font-family: var(--rtc-font-family-2);
+  font-size: 0.8em;
+}
+
+.score-div {
+  margin: var(--rtc-margin-l);
+  padding: var(--rtc-padding-m);
+  border: 1px solid grey;
+  border-radius: var(--rtc-border-radius);
+  background-color: var(--rtc-color-1);
+}
+
+.score {
+  font-family: var(--rtc-font-family-2);
+}
+/* No sé a qué tengo que aplicar este estilo, pero lo dejo para cuando lo sepa: 
+  box-shadow: inset 0px 0px 15px -4px rgba(0, 0, 0, 0.75); */
