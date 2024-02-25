@@ -54,3 +54,17 @@ h1 {
 .all-games-div p:hover {
   cursor: pointer;
 }
+
+@media (max-width: 600px) and (min-width: 370px) {
+  .all-games-div {
+    flex-wrap: wrap;
+  }
+  .all-games-div .link-to-game {
+    width: 60px;
+    height: 90px;
+  }
+  .all-games-div p {
+    font-size: 1.2em;
+    width: 110px;
+  }
+}

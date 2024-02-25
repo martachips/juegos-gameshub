@@ -47,4 +47,5 @@
 .img-monster {
   width: 50px;
   position: absolute;
+  cursor: pointer;
 }

@@ -1,6 +1,6 @@
 import './wacacrash.css';
 
-const INITIAL_SECONDS = 60;
+const INITIAL_SECONDS = 40;
 const INITIAL_SCORE = 0;
 
 let wacaScore;
