@@ -32,7 +32,7 @@ const createBoard = () => {
   const score = document.createElement('p');
 
   playButton.classList.add('play-btn', 'btn');
-  resetButton.classList.add('reset-btn', 'btn');
+  resetButton.classList.add('reset-button', 'btn');
   timer.classList.add('timer-interval');
   score.classList.add('score');
 
