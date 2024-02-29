@@ -50,7 +50,7 @@ const createBoard = () => {
   });
 
   dataSection.append(playButton, resetButton, timer, score);
-  containerSection.append(randomImgSection, dataSection);
+  containerSection.append(dataSection, randomImgSection);
   divApp.append(containerSection);
 };
 

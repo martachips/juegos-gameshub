@@ -1,5 +1,5 @@
 .container {
-  width: 65rem;
+  width: 95%;
   background-color: var(--rtc-color-4);
   border: 1px solid var(--rtc-color-4);
   border-radius: var(--rtc-border-radius);
@@ -10,7 +10,7 @@
 }
 
 .random-img-section {
-  width: 70%;
+  width: 800px;
   height: 700px;
   border-radius: 6px;
   margin: 5px 0;
@@ -18,15 +18,23 @@
 }
 
 .data-section {
-  width: 25%;
+  width: 150px;
   height: 300px;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: var(--rtc-margin-m);
   font-family: var(--rtc-font-family-2);
+  transition: all 0.3s ease;
+}
+
+.data-section p {
+  margin: 5px;
+  font-size: 0.9em;
 }
 
 .random-img-section,
@@ -36,16 +44,33 @@
 }
 
 .btn {
-  width: 80px;
-  height: 40px;
-  font-size: 1.1em;
+  width: 70px;
+  height: 35px;
+  /* font-size: 1.1em; */
+  margin: 5px;
   font-family: var(--rtc-font-family-2);
   border: 1px solid var(--rtc-background-color);
   border-radius: var(--rtc-border-radius);
 }
 
 .img-monster {
-  width: 50px;
+  width: 40px;
   position: absolute;
   cursor: pointer;
+}
+
+@media (max-width: 1128px) {
+  .data-section {
+    width: 350px;
+    height: 100px;
+    flex-direction: row;
+  }
+
+  .random-img-section {
+    max-height: 500px;
+  }
+
+  .img-monster {
+    width: 35px;
+  }
 }

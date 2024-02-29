@@ -10,8 +10,11 @@ export const initGuess = () => {
   const divInputAndButton = document.createElement('div');
   divInputAndButton.classList.add('container-input-button');
   const inputNumber = document.createElement('input');
-  inputNumber.type = 'number';
+  inputNumber.type = 'text';
+  inputNumber.placeholder = 'between 1-99';
   inputNumber.classList.add('number-field');
+  inputNumber.id = 'number-field';
+  inputNumber.maxLength = 2;
   const buttonGuess = document.createElement('button');
   buttonGuess.textContent = 'Guess';
   buttonGuess.classList.add('guess-button');
@@ -27,12 +30,28 @@ export const initGuess = () => {
   let guessButton = document.querySelector('.guess-button');
   guessButton.addEventListener('click', () => checkNumber(), false);
 
+  inputNumber.addEventListener('input', () => {
+    validarEntrada();
+  });
   // const savedGameState = JSON.parse(sessionStorage.getItem('guessGameState'));
   // if (savedGameState) {
   //   numberToGuess = savedGameState.numberToGuess;
   //   messages.innerHTML = savedGameState.messages;
   // }
 };
+
+function validarEntrada() {
+  let inputNumber = document.querySelector('#number-field');
+  const valor = inputNumber.value;
+
+  if (!/^\d{1,2}$/.test(valor)) {
+    inputNumber.setCustomValidity(
+      'Número inválido. Debe ser menor o igual a 99.'
+    );
+  } else {
+    inputNumber.setCustomValidity('');
+  }
+}
 
 let numberToGuess;
 
@@ -42,16 +61,15 @@ function randomNumber(low, high) {
 }
 
 function setNumberToGuess() {
-  numberToGuess = randomNumber(0, 100);
+  numberToGuess = randomNumber(0, 99);
 }
 setNumberToGuess();
 
 function checkNumber() {
   let numberField = document.querySelector('.number-field');
-  let guessButton = document.querySelector('.guess-button');
   let results = document.querySelector('.message-p');
 
-  let enteredNumber = String(numberField.value);
+  let enteredNumber = parseInt(numberField.value, 10);
   numberField.value = '';
 
   if (enteredNumber == numberToGuess) {

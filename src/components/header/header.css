@@ -55,7 +55,7 @@ h1 {
   cursor: pointer;
 }
 
-@media (max-width: 600px) and (min-width: 370px) {
+@media (max-width: 600px) {
   .all-games-div {
     flex-wrap: wrap;
   }

@@ -14,26 +14,33 @@
 
 .container-input-button {
   margin: var(--rtc-margin-l);
+  height: 40px;
+  display: flex;
+  align-items: center;
 }
 
 .number-field,
 .guess-button {
-  height: 30px;
+  height: 40px;
   margin: var(--rtc-margin-s);
   border-radius: var(--rtc-border-radius);
   font-family: var(--rtc-font-family-2);
 }
 
 .number-field {
-  width: 100px;
+  width: 150px;
   outline: none;
   padding: var(--rtc-padding-s);
 }
+.number-field::placeholder {
+  font-size: 0.8em;
+}
 
 .guess-button {
-  width: 45px;
+  width: 65px;
   background-color: var(--rtc-color-1);
 }
+
 .message-p p {
   padding: var(--rtc-padding-s);
   text-align: center;

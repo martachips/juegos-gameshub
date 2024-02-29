@@ -46,16 +46,13 @@
   font-size: 0.8em;
 }
 
-.score-div {
+.score-div,
+.reset-btn {
   margin: var(--rtc-margin-l);
   padding: var(--rtc-padding-m);
   border: 1px solid grey;
   border-radius: var(--rtc-border-radius);
   background-color: var(--rtc-color-1);
-}
-
-.score {
   font-family: var(--rtc-font-family-2);
+  font-size: 1em;
 }
-/* No sé a qué tengo que aplicar este estilo, pero lo dejo para cuando lo sepa: 
-  box-shadow: inset 0px 0px 15px -4px rgba(0, 0, 0, 0.75); */

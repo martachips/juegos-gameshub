@@ -82,33 +82,16 @@ export const dataTrivial = [
     correcta: 'Lothlórien'
   }
 ];
-let score = 0;
+let INIT_SCORE = 0;
+let score;
 export const initTrivial = () => {
   const divApp = document.querySelector('#app');
   divApp.innerHTML = '';
 
-  const currentTitle = getCurrentTitle();
-
-  if (currentTitle === 'ESDLA Trivial') {
-    score = 0;
-  }
-
   createCardsTrivial();
-
-  const scoreDiv = document.createElement('div');
-  const scoreP = document.createElement('p');
-
-  scoreDiv.classList.add('score-div');
-  scoreP.classList.add('score');
-  scoreP.textContent = `Puntuación: ${score}`;
-
-  scoreDiv.append(scoreP);
-  divApp.append(scoreDiv);
-};
-
-const getCurrentTitle = () => {
-  const trivialTitle = document.querySelector('.trivial-title');
-  return trivialTitle ? trivialTitle.textContent.trim() : '';
+  score = INIT_SCORE;
+  createScoreDiv();
+  createResetBtn();
 };
 
 const createCardsTrivial = () => {
@@ -207,4 +190,30 @@ function hideOtherOptions(container, selectedCheckbox) {
       box.parentElement.style.display = 'none';
     }
   });
+}
+
+function createScoreDiv() {
+  const divApp = document.querySelector('#app');
+  const scoreDiv = document.createElement('div');
+  const scoreP = document.createElement('p');
+
+  scoreDiv.classList.add('score-div');
+  scoreP.classList.add('score');
+  scoreP.textContent = `Puntuación: ${score}`;
+
+  scoreDiv.append(scoreP);
+  divApp.append(scoreDiv);
+}
+
+function createResetBtn() {
+  const divApp = document.querySelector('#app');
+  const resetBtn = document.createElement('button');
+
+  resetBtn.textContent = 'Reset';
+  resetBtn.classList.add('reset-btn');
+
+  resetBtn.addEventListener('click', () => {
+    initTrivial();
+  });
+  divApp.append(resetBtn);
 }
